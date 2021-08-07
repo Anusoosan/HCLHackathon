@@ -1,4 +1,4 @@
-package Healthcaresuccess;
+package Healthcaresuccess.Hackathon;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -8,14 +8,17 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class base {
 	public WebDriver driver;
+	private Actions action;
+
 
 	public WebDriver initializeDriver() throws IOException {
 		Properties prop = new Properties();
 		FileInputStream fis = new FileInputStream(
-				"/Users/johnsgeorge/Documents/MyLearnings/Java Learnings/Healthcaresuccess/src/main/java/Healthcaresuccess/data.properties");
+				"/Users/johnsgeorge/git/Healthcaresuccess/Healthcaresuccess/src/main/java/Healthcaresuccess/Hackathon/data.properties");
 		prop.load(fis);
 		String browserName = prop.getProperty("browser");
 
@@ -34,5 +37,6 @@ public class base {
 		return driver;
 
 	}
+
 
 }

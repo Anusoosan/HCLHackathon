@@ -1,4 +1,4 @@
-package Healthcaresuccess;
+package Healthcaresuccess.Hackathon;
 
 /**
  * Hello world!
